@@ -1,15 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./Home.css";
+import React from 'react'
+
+//import Components
+import FrontPage from '../components/FrontPage'
+import FetchAPI from '../components/FetchAPI'
 
 export default function Home() {
   return (
-    <div className="homePage">
-      <div className="HomeContents">
-        <Link to="/About">About</Link>
-        <br />
-        <Link to="/Search">Search</Link>
-      </div>
+    <div>
+      <FrontPage/>
+      <FetchAPI/>
     </div>
-  );
+  )
 }
