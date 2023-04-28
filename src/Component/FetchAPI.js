@@ -2,22 +2,23 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-export default function FetchAPI() {
+export default function FetchAPI({category}) {
   const [apiData, setData] = useState("");
 
-  // const key = "pub_21179665c58737a9bf04d6e37b0eab722ef31";
-  // const url = `https://newsdata.io/api/1/news?apikey=${key}&q=pizza`
+  const key = "pub_21179665c58737a9bf04d6e37b0eab722ef31";
+  const url = `https://newsdata.io/api/1/news?apikey=${key}`
+  const urlWithCat = `https://newsdata.io/api/1/news?apikey=${key}&category=${category}`
 
   const getAPI = async () => {
-    await axios.get(categories ? urlWithCat : url).then((response) => {
-      let resultData = response.data.articles;
+    await axios.get(category ? urlWithCat : url).then((response) => {
+      let resultData = response.data.results;
       console.log(resultData);
       setData(resultData);
     });
   };
   useEffect(() => {
     getAPI();
-  }, [categories]);
+  }, [category]);
 
   return (
     <div
@@ -38,20 +39,21 @@ export default function FetchAPI() {
                 >
                   <h5 className="my-2">{item.title}</h5>
                   <div className="d-flex justify-content-center align-items-center">
-                    <img
+                    {/* <img
                       alt="Data not available.."
-                      src={item.urlToImage}
+                      src={item.image_url}
                       className="img-fluid"
                       style={{
                         width: "100%",
                         height: "300px",
                         objectFit: "cover",
                       }}
-                    />
+                    /> */}
                   </div>
+                  <p className="my-1">Published on: {item.pubDate}</p>
 
-                  <p className="my-1">{item.content}</p>
-                  <Link to={item.url} target="blank">
+                  {/* <p className="my-1">{item.description}</p> */}
+                  <Link to={item.link} target="blank">
                     View More
                   </Link>
                 </div>

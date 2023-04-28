@@ -93,6 +93,24 @@ export default function Navbar() {
                   Technology
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link active text-white"
+                  aria-current="page"
+                  to="/Food"
+                >
+                  Food
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link active text-white"
+                  aria-current="page"
+                  to="/Tourism"
+                >
+                  Tourism
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
