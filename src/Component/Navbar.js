@@ -30,15 +30,6 @@ export default function Navbar() {
                   Home
                 </Link>
               </li>
-              {/* <li className="nav-item">
-                <Link
-                  className="nav-link active text-white"
-                  aria-current="page"
-                  to="/General"
-                >
-                  General
-                </Link>
-              </li> */}
               <li className="nav-item">
                 <Link
                   className="nav-link active text-white"
