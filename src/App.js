@@ -16,7 +16,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home/>}></Route>
-          <Route path='/General' element={<FetchAPI category="general"/>}></Route>
+          {/* <Route path='/General' element={<FetchAPI category="general"/>}></Route> */}
           <Route path='/Business' element={<FetchAPI category="business"/>}></Route>
           <Route path='/Entertainment' element={<FetchAPI category="entertainment"/>}></Route>
           <Route path='/Health' element={<FetchAPI category="health"/>}></Route>
