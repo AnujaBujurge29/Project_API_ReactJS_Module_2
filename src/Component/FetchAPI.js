@@ -10,9 +10,9 @@ export default function FetchAPI({ category }) {
 
   const key = "pub_21179665c58737a9bf04d6e37b0eab722ef31";
   //API url without news category sleection
-  let url = `https://newsdata.io/api/1/news?apikey=${key}`;
+  let url = `https://newsdata.io/api/1/news?apikey=${key}&language=en`;
    //API url with news category sleection
-  let urlWithCat = `https://newsdata.io/api/1/news?apikey=${key}&category=${category}`;
+  let urlWithCat = `https://newsdata.io/api/1/news?apikey=${key}&language=en&category=${category}`;
 
   //fetching API
   const getAPI = async () => {
